@@ -1,0 +1,36 @@
+  # --- parameter ---
+  hobbit:hasParameter bsbm:pc;
+  hobbit:hasParameter bsbm:ud;
+  hobbit:hasParameter bsbm:tc;
+  hobbit:hasParameter bsbm:ppt;
+  hobbit:hasParameter bsbm:runs;
+  hobbit:hasParameter bsbm:w;
+  hobbit:hasParameter bsbm:seed;
+  # --- API ---
+  hobbit:hasAPI chal:MOCHA2017-API .
+
+chal:MOCHA2017-API a hobbit:API .
+
+# --- KPI ---
+bsbm:overallSuccess a hobbit:KPI;
+  rdfs:label "(a) overallSuccess: successful queries";
+  rdfs:range xsd:integer.
+bsbm:overallFailure a hobbit:KPI;
+  rdfs:label "(b) overallFailure: failed queries";
+  rdfs:range xsd:integer.
+bsbm:overallRuntime a hobbit:KPI;
+  rdfs:label "(c) overallRuntime: overall runtime";
+  rdfs:range xsd:double.
+bsbm:overallRuntimeAcc a hobbit:KPI;
+  rdfs:label "(d) overallRuntimeAcc: overall runtime accumulated";
+  rdfs:range xsd:double.
+bsbm:overallAQET a hobbit:KPI;
+  rdfs:label "(e) overallAQET: average query execution time";
+  rdfs:range xsd:double.
+bsbm:overallAQETgeo a hobbit:KPI;
+  rdfs:label "(f) overallAQETgeo: average query execution time (geometric)";
+  rdfs:range xsd:double.
+bsbm:queryMixPerHour a hobbit:KPI;
+  rdfs:label "(g) queryMixPerHour: queryMix per hour";
+  rdfs:range xsd:double.
+

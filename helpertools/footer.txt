@@ -1,0 +1,45 @@
+# --- parameter ---
+# ----- generator parameter -----
+bsbm:pc a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "number of products (-pc)"@en;
+  rdfs:comment "Scale factor: The dataset is scaled via the number of products. For example: 91 products make about 50K triples."@en;
+  rdfs:range xsd:unsignedInt;
+  hobbit:defaultValue "1000"^^xsd:unsignedInt .
+
+bsbm:ud a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "use update transactions (-ud)"@en;
+  rdfs:comment "Enables generation of update dataset for update transactions."@en;
+  rdfs:range xsd:boolean;
+  hobbit:defaultValue "false"^^xsd:boolean .
+
+bsbm:tc a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "number of update transactions (-tc)"@en;
+  rdfs:comment "Specifies for how many update transactions, update data has to be written."@en;
+  rdfs:range xsd:unsignedInt;
+  hobbit:defaultValue "100"^^xsd:unsignedInt .
+
+bsbm:ppt a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "products per update transaction (-ppt)"@en;
+  rdfs:comment "Specifies how many products with their corresponding data (offers, reviews) will be generated per update transaction. (Note: the product count has to be at least as high as the math product of the numbers defined with the -tc and -ppt options.)"@en;
+  rdfs:range xsd:unsignedInt;
+  hobbit:defaultValue "1"^^xsd:unsignedInt .
+
+# ----- testdriver parameter -----
+bsbm:runs a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "number of query mix runs (-runs)"@en;
+  rdfs:comment "The number of query mix runs."@en;
+  rdfs:range xsd:unsignedInt;
+  hobbit:defaultValue "50"^^xsd:unsignedInt .
+
+bsbm:w a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "number of warm up runs (-w)"@en;
+  rdfs:comment "Number of runs executed before the actual test to warm up the store."@en;
+  rdfs:range xsd:unsignedInt;
+  hobbit:defaultValue "10"^^xsd:unsignedInt .
+
+bsbm:seed a hobbit:ConfigurableParameter, hobbit:FeatureParameter;
+  rdfs:label "seed for data-generator (-seed)"@en;
+  rdfs:comment "Set the seed for the random number generator used for the parameter generation."@en;
+  rdfs:range xsd:integer;
+  hobbit:defaultValue "808080"^^xsd:integer .
+  

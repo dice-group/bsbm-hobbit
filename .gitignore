@@ -1,0 +1,17 @@
+/.idea
+/target
+/*.iml
+.classpath
+.project
+.settings/
+dataset.nt
+dataset_update.nt
+steadystate.tsv
+benchmark_result.xml
+dependency-reduced-pom.xml
+queryMix.query
+filesForDocker.tar.gz
+/helpertools/benchmark.ttl
+/td_data
+fuseki/
+

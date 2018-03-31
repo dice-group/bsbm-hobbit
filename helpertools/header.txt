@@ -1,0 +1,24 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hobbit: <http://w3id.org/hobbit/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bsbm: <http://project-hobbit.eu/berlin-sparql-benchmark/> .
+@prefix chal: <https://project-hobbit.eu/challenges/> .
+
+bsbm:benchmark a hobbit:Benchmark;
+  rdfs:label "Berlin SPARQL Benchmark (testing)"@en;
+  rdfs:comment    "Compare performance of SPARQL endpoints"@en;
+  hobbit:imageName    "git.project-hobbit.eu:4567/bsbm/berlin-sparql-benchmark/benchmark-controller";
+  hobbit:usesImage "git.project-hobbit.eu:4567/bsbm/berlin-sparql-benchmark/datagen";
+  hobbit:usesImage "git.project-hobbit.eu:4567/bsbm/berlin-sparql-benchmark/taskgen";
+  hobbit:usesImage "git.project-hobbit.eu:4567/bsbm/berlin-sparql-benchmark/eval-storage";
+  hobbit:usesImage "git.project-hobbit.eu:4567/bsbm/berlin-sparql-benchmark/eval-module";
+  hobbit:version "v1.0"@en;
+  # --- KPI ---
+  hobbit:measuresKPI bsbm:overallSuccess;
+  hobbit:measuresKPI bsbm:overallFailure;
+  hobbit:measuresKPI bsbm:overallRuntime;
+  hobbit:measuresKPI bsbm:overallRuntimeAcc;
+  hobbit:measuresKPI bsbm:overallAQET;
+  hobbit:measuresKPI bsbm:overallAQETgeo;
+  hobbit:measuresKPI bsbm:queryMixPerHour;
+
