@@ -23,19 +23,32 @@ You need Oracle Java 1.8 (or higher), Docker v17 (or higher) and Apache Maven v3
 
 See [Hobbit Java SDK Wiki](https://github.com/hobbit-project/java-sdk/wiki) and [Java SDK Example Readme](https://github.com/hobbit-project/java-sdk-example/blob/master/README.md) for further details.
 
+### Local test without Docker (pure Java):
+* `make clean`
+* `make test`
+
+### Local test with Docker
+* `make buildimages`
+* `make dockertest`
+
+### Creating benchmark.ttl
+For creating the *benchmark.ttl* use the script *helpertools/generateBenchmarkTTL.sh*.
+Default values:
+* `./generateBenchmarkTTL.sh 12 2 8`
+
+### List of useful single commands
 * `make clean`
 * `mvn clean`
 * `mvn validate`
-* `mvn package -DskipTest=true`
+* `mvn package -DskipTests=true`
 * `mvn test`
 
-For creating the *benchmark.ttl* use the script *helpertools/generateBenchmarkTTL.sh*.
-
-Before creating the docker images, use *pack-stuff.sh* to prepare all necessary files.
+Before manually creating the docker images, use *packFilesForDocker.sh* to prepare all necessary files.
+* `./packFilesForDocker.sh`
 
 ## License
 * This imlementation of the Benchmark is licensed under [GNU AGPL 3.0](https://www.gnu.org/licenses/agpl-3.0.html)
-* The original Berlin SPARQL Benchmark is licensed under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0), e. g. the following files and folders:
+* The original Berlin SPARQL Benchmark is licensed under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0):
   * *queries/*
   * *src/main/java/benchmark/*
   * *usecases/*
